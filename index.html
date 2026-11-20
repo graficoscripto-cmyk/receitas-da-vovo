@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff8eb"><meta name="description" content="Receitas de família, guardadas com carinho no caderno da Vovó.">
+<title>Receitas da Vovó — Caderno de família</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#inicio" aria-label="Receitas da Vovó início"><span class="seal">rv</span><span>Receitas <i>da Vovó</i></span></a><button id="addOpen" class="add-top" aria-label="Cadastrar nova receita">＋ <span>Nova receita</span></button></header>
+<main id="inicio">
+ <section class="hero"><div class="hero-copy"><span class="eyebrow"><span class="dot"></span> CADERNO DE FAMÍLIA · DESDE SEMPRE</span><h1>Um tantinho de<br><em>carinho em cada receita.</em></h1><p>Sabores escritos à mão, feitos de novo e passados adiante.</p><div class="hero-note"><span>✳</span> 13 receitas queridas <b>•</b> feitas para compartilhar</div></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="flower f1">✿</div><div class="flower f2">✿</div><div class="flower f3">✿</div><div class="art-label">feito<br>com amor</div><div class="art-leaf l1"></div><div class="art-leaf l2"></div></div></section>
+ <section class="shelf" aria-label="Caderno de receitas"><div class="section-head"><div><span class="eyebrow">O CADERNO</span><h2>O que vamos preparar?</h2></div><span id="count" class="count"></span></div>
+  <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Busque receita ou ingrediente…" autocomplete="off"><kbd>⌕</kbd></label>
+  <nav id="filters" class="filters" aria-label="Filtrar receitas"></nav>
+  <div id="grid" class="grid" aria-live="polite"></div>
+ </section>
+ <section class="closing"><span class="flower-mark">✿</span><p>Receita boa é receita <i>compartilhada.</i></p><span>Com amor, da nossa cozinha para a sua.</span></section>
+</main>
+<footer>Feito com carinho <span>♥</span> para guardar histórias à mesa</footer>
+<dialog id="recipeDialog" class="dialog"><div id="recipeContent"></div></dialog>
+<dialog id="addDialog" class="dialog add-dialog"><form id="newForm"><button type="button" class="close" data-close aria-label="Fechar">×</button><span class="eyebrow">MAIS UMA PÁGINA NO CADERNO</span><h2>Nova receita</h2><label>Nome da receita<input name="name" required maxlength="70" placeholder="Ex.: Bolo de domingo"></label><label>Categoria<select name="category"><option>Bolos</option><option>Pudins & Doces</option><option>Pães & Quitutes</option><option>Sem Lactose</option></select></label><label>Ingredientes <small>(um por linha)</small><textarea name="ingredients" required rows="4" placeholder="2 xícaras de farinha&#10;3 ovos"></textarea></label><label>Modo de preparo<textarea name="steps" required rows="4" placeholder="Misture com carinho…"></textarea></label><label>Dica da Vovó <small>(opcional)</small><textarea name="tip" rows="2"></textarea></label><button class="primary" type="submit">Guardar no caderno</button></form></dialog>
+<script src="app.js"></script>
+</body></html>
